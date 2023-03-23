@@ -1,4 +1,4 @@
-import java.io.IOException;
+/*import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,7 +17,7 @@ class TrailLoader {
 
     /**
      * Reads from tree.json into ArrayList<TrailSegment>
-     */
+     *
     private static ArrayList<Edge> readJsonList(String filename) {
 
         String sample = "[{\"trail\": 210,\"dist\": 0.1, \"note\": \"junction 23 in middle\", \"nodes\": [\"E6\", \"F6\"]}]";
@@ -69,7 +69,7 @@ class TrailLoader {
  * Represents a trail segment, with a trail name and distance, between two
  * junctions.
  * For example: trail 241 between A1 and C4 is 0.51 miles.
- */
+ *
 class Edge {
 
     private String trail;
@@ -89,7 +89,7 @@ class Edge {
      * The junctions of this trail segment, e.g. {"A1", "C4"} for trail 241 in the
      * top left of the map.
      * Arrays are ordered, but the order is not important.
-     */
+     *
     protected String[] getJunctions() {
         return nodes;
     }
@@ -103,14 +103,14 @@ class Edge {
 
     /**
      * The distance for this trail segment, in miles.
-     */
+     *
     public double getDist() {
         return dist;
     }
 
     /**
      * The trail name for this segment. For example, "126"
-     */
+     *
     public String getTrail() {
         return trail;
     }
@@ -132,7 +132,7 @@ class Edge {
 
 /**
  * Represents our map, providing access to the trail segments.
- */
+ *
 class TrailMap {
 
     private HashMap<String, ArrayList<Edge>> trails;
@@ -146,7 +146,7 @@ class TrailMap {
      * 
      * @param junction from which to find trails, e.g. "C4"
      * @return the trail segments departing from a junction
-     */
+     *
     public ArrayList<Edge> getTrails(String junction) {
         return trails.get(junction);
     }
@@ -158,7 +158,7 @@ class TrailMap {
      * @param junction from which to find neighbors, e.g. "C4"
      * @return array of junctions accessible by trail segments departing from
      *         junction
-     */
+     *
     public String[] getNeighbors(String junction) {
         ArrayList<String> junctions = new ArrayList<String>();
         for (Edge trail : this.getTrails(junction)) {
@@ -179,7 +179,7 @@ class TrailMap {
      * @param start one end of the trail segment to find.
      * @param end   one end of the trail segment to find.
      * @return the trail segment from start to end.
-     */
+     *
     public Edge getTrail(String start, String end) {
         for (Edge edge : this.getTrails(start)) {
             if (Arrays.asList(edge.getJunctions()).contains(end)) {
@@ -201,7 +201,7 @@ public class Explorer {
      * 
      * @param path  a list of junctions visited
      * @param steps the number of steps left to hike.
-     */
+     *
     public static void explore(ArrayList<String> path, int steps) {
         // TODO build a recursive function
         String whereWEAre = path.get(path.size - 1);
@@ -237,3 +237,4 @@ public class Explorer {
 
     }
 }
+*/

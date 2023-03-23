@@ -2,20 +2,42 @@ package unit10;
 
 public class Recur {
 
-    public static int fun3(int n) {
-        if (n == 0)
-            return 1;
-        else
-            return 3 * fun3(n - 1);
+    public static void potato(int n) {
+        System.out.println("called potato("+n+")");
+        System.out.print(n % 10);
+        if (n / 10 != 0) {
+            potato(n / 10);
+        }
+        System.out.println("exited potato("+n+")");
     }
 
-    public static int f(int n) {
-        if (n == 0)
-            return 0;
-        else if (n == 1)
+    public static int fun3(int n) {
+        System.out.println("entered fun3("+n+")");
+        if (n == 0){
+            System.out.println("returned 1");
             return 1;
-        else
+        }
+        else{
+            System.out.println("returned 3 * fun3("+(n-1)+")");
+            return 3 * fun3(n - 1);
+        }
+            
+    }
+    // what is f of 3
+    public static int f(int n) {
+        System.out.println("enetered f("+n+")");
+        if (n == 0){
+            System.out.println("returned 0 ");
+            return 0;
+        }
+        else if (n == 1){
+            System.out.println("returned 1 ");
+            return 1;
+        }
+        else{
+            System.out.println("returned f("+(n - 1)+") + f("+(n - 2)+") ");
             return f(n - 1) + f(n - 2);
+        }
     }
 
     public static boolean has(String input) {
@@ -62,10 +84,10 @@ public class Recur {
     public static void main(String[] args) {
 
         // Consider function fun3
-        // System.out.println(fun3(5));
+         System.out.println(fun3(5));
 
         // Consider function f
-        // System.out.println(f(6));
+         System.out.println(f(3));
 
         // Consider function has
         // System.out.println(has("hello"));
