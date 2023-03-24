@@ -5,16 +5,23 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class SpellingBee {
-
-    private char[] letters;
+    // TODO construct me!
+    private char[] letetrs;
     private char mustUse;
 
-    // TODO construct me!
-
     public boolean checkWord(String word) {
-        // TODO implement me!
+        if (word.length() < 4 || word.length() < word.indexOf(mustUse)){
+            return false;
+        }
+        else 
         return true;
     }
+
+    public SpellingBee(char[] letetrs, char mustUse) {
+        this.letetrs = letetrs;
+        this.mustUse = mustUse;
+    }
+
 
     /**
      * Loads the contents of file "filename" as a String.
@@ -46,5 +53,26 @@ public class SpellingBee {
 
         // TODO what position in the sorted list is the word "search" ?
 
+        // Linear Search
+        Arrays.sort(words);
+        int n = 0;
+        for(String words:words){
+            n++;
+            if(words.equals("potato")){
+                //System.out.println("found potato at " + n);
+            }
+        }
+
+        String findMe = "potato";        
+
+        int begin = 0;
+        int end = words.length - 1;
+        int guess = (begin + end) / 2;
+        int check = words[guess].compareTo(findMe);
+        System.out.println("word is ");
+        System.out.println("check is " + check);
+
     }
 }
+
+    
