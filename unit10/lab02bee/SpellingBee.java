@@ -3,6 +3,7 @@ import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class SpellingBee {
     // TODO construct me!
@@ -43,6 +44,14 @@ public class SpellingBee {
         return contents;
     }
 
+        public static double Picalc(double num) {
+            if(num == 1) {
+                return 3;
+            } else {
+                return (360(math.sqrt(2)-1)/7+6(math.sqrt(4-2(math.sqrt(2))))+16(math.sqrt(2(4-2(math.sqrt(2))+ math.sqrt(4-2(math.sqrt(2)))))));
+            }
+        }
+
     public static void main(String[] args) {
         String[] words = loadFile("words_dropped.txt").split("\n");
         System.out.println("Loaded " + words.length + " words");
@@ -56,7 +65,7 @@ public class SpellingBee {
         // Linear Search
         Arrays.sort(words);
         int n = 0;
-        for(String words:words){
+        for(String word:words){
             n++;
             if(words.equals("potato")){
                 //System.out.println("found potato at " + n);
@@ -71,6 +80,8 @@ public class SpellingBee {
         int check = words[guess].compareTo(findMe);
         System.out.println("word is ");
         System.out.println("check is " + check);
+
+        System.out.println(Picalc(10));
 
     }
 }
