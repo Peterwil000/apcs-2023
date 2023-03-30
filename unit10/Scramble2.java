@@ -51,6 +51,56 @@ public class Scramble2 {
         }
     }
 
+        /**
+     * Sorts the array using the Merge Sort algorithm.
+     * Modified code from https://www.baeldung.com/java-merge-sort
+     * 
+     * @param arr the array to sort
+     */
+    public static void mergeSort(String[] arr) {
+        int n = arr.length;
+        // base case: no need to sort a single element (or empty) array
+        if (n < 2) {
+            return;
+        }
+        // split the array to sort recursively.
+        int mid = n / 2;
+        String[] l = new String[mid];
+        String[] r = new String[n - mid];
+
+        for (int i = 0; i < mid; i++) {
+            l[i] = arr[i];
+        }
+        for (int i = mid; i < n; i++) {
+            r[i - mid] = arr[i];
+        }
+        mergeSort(l);
+        mergeSort(r);
+
+        // MERGE
+        int left = mid;
+        int right = n - mid;
+        // pointers for left array (i), right array (j), and combined array (k)
+        int i = 0, j = 0, k = 0;
+        while (i < left && j < right) {
+            //if (l[i] <= r[j]) {
+            if(l[i].compareTo(r[j])<= 0){
+                arr[k++] = l[i++];
+            } else {
+                arr[k++] = r[j++];
+            }
+        }
+        // if we finish one array, complete the other
+        while (i < left) {
+            arr[k++] = l[i++];
+        }
+        while (j < right) {
+            arr[k++] = r[j++];
+        }
+    }
+
+    
+
     static boolean DEBUG = false;
 
     /**
@@ -122,5 +172,11 @@ public class Scramble2 {
 
         Scramble.shuffle(arr2);
         System.out.println("Shuffled: " + Arrays.toString(arr2));
+
+        
+        String[] folks = { Noah_Dunham, Kai_Wallis, Max_Olsen, Marley_Baker, Frank_Peterson, Marc_Filiberto, Allyah_Hall, Tessa_Shanin, Mya_Rygg, Naomi_Norgard, Mikiah_Dunham, Aaron_Johnson, Logan_Rainchild,Liam_Hastings, Issac_Breifer, Sean_Dyer, Will_Peterson};
+
+        mergeSort(folks);
+        System.out.println("Folks sorted: " + Arrays.toString(folks));
     }
 }

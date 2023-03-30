@@ -48,7 +48,7 @@ public class SpellingBee {
             if(num == 1) {
                 return 3;
             } else {
-                return (360(math.sqrt(2)-1)/7+6(math.sqrt(4-2(math.sqrt(2))))+16(math.sqrt(2(4-2(math.sqrt(2))+ math.sqrt(4-2(math.sqrt(2)))))));
+                return (num);
             }
         }
 
