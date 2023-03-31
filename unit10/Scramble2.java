@@ -58,6 +58,7 @@ public class Scramble2 {
      * @param arr the array to sort
      */
     public static void mergeSort(String[] arr) {
+        String[] folks = { Noah_Dunham, Kai_Wallis, Max_Olsen, Marley_Baker, Frank_Peterson, Marc_Filiberto, Allyah_Hall, Tessa_Shanin, Mya_Rygg, Naomi_Norgard, Mikiah_Dunham, Aaron_Johnson, Logan_Rainchild,Liam_Hastings, Issac_Breifer, Sean_Dyer, Will_Peterson};
         int n = arr.length;
         // base case: no need to sort a single element (or empty) array
         if (n < 2) {
