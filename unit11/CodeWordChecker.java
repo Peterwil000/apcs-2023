@@ -16,6 +16,13 @@ public class CodeWordChecker implements StringChecker {
         // TODO
         return false; // replace me!
     }
+    
+    public wordPairList(String[] words){
+        String[] WordPairList[];
+        while (words.length >= 2){
+
+        }
+    }
 
     static boolean check(boolean test) throws AssertionError {
         if (!test)

@@ -54,13 +54,7 @@ public class FrogSimulation {
      * false otherwise.
      */
     public boolean simulate() {
-        while(leapCount < maxHops){
-            goalDistance() = goalDistance() - hopDistance();
-                if (goalDistance <= 0){
-                  return true;
-                }   
-                leapCount++;
-        }
+      
         return false; 
     }
 
