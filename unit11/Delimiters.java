@@ -1,5 +1,6 @@
 package unit11;
 
+import java.net.DatagramSocketImpl;
 // 2019 FRQ #3
 // https://apcentral.collegeboard.org/media/pdf/ap19-frq-computer-science-a.pdf#page=9
 import java.util.ArrayList;
@@ -26,8 +27,14 @@ public class Delimiters {
      * part (a).
      */
     public ArrayList<String> getDelimitersList(String[] tokens) {
-        /* to be implemented in part (a) */
-        return null; // replace me
+        ArrayList<String> DelList = new ArrayList<String>();
+
+        for (int i = 0; i <= tokens.length - 1; i++) {
+            if (tokens[i].equals(openDel) || tokens[i].equals(closeDel)) {
+                DelList.add(tokens[i]);
+            }
+        }
+        return DelList;
     }
 
     /**
@@ -36,8 +43,21 @@ public class Delimiters {
      * Precondition: delimiters contains only valid open and close delimiters.
      */
     public boolean isBalanced(ArrayList<String> delimiters) {
-        /* to be implemented in part (b) */
-        return false; // replace me
+        int open;
+        int close;
+
+        for (int i = 0; i < DelList.length; i++) {
+            if (tokens[i].equals(openDel)) {
+                open++;
+            } else
+                close++;
+
+            if (open < close) {
+                return false;
+            } else if (open == close)
+                return true;
+        }
+        return false;
     }
 
     // There may be instance variables, constructors, and methods that are not
