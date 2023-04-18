@@ -4,6 +4,8 @@ package unit11;
 // https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-frq-2017.pdf#page=16
 import java.util.Arrays;
 
+import javax.tools.JavaFileManager.Location;
+
 class Position {
     int r;
     int c;
@@ -21,13 +23,27 @@ class Position {
 
 public class Successors {
     public static Position findPosition(int num, int[][] intArr) {
-        // TODO part a
+        Position location;
 
-        return null; // replace me
+        for (int r = 0; r <= intArr.length; r ++){
+            for (int c = 0; c <= intArr[r].length; c++){
+                location = new Position(r, c);
+                if(intArr[r][c] == num){
+                    return location;
+                }
+            }
+        }
+        return null;
+
+        //return null; // replace me
     }
 
     public static Position[][] getSuccessorArray(int[][] intArr) {
-        // TODO part b
+        for (int r = 0; r <= intArr.length; r++){
+            for (int c = o; c <= intArr[r].length; c++){
+                location[r][c] = getSuccessorArray(intArr[r][c]).findPosition(intArr[r][c] + 1); //? Need to figure out to finish this line to get happy panda (moved on to get more practice)
+            }
+        }
 
         return null; // replace me
     }

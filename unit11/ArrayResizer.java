@@ -1,12 +1,20 @@
 package unit11;
 
+import java.lang.reflect.Array;
 // 2021 FRQ #4
 // https://apcentral.collegeboard.org/media/pdf/ap21-frq-computer-science-a.pdf#page=14
 import java.util.Arrays;
 
 public class ArrayResizer {
-    public static boolean isNonZeroRow(int[][] array2D, int r) {
-        // TODO part a
+    public static boolean isNonZeroRow(int[][] array2D, int resize) {
+
+        for (int r = 0; r <= array2D.length; r++){
+            for (int c = 0; c <= array2D[r].length; c++){
+                if (array2D[r][c] == 0){
+                    return false;
+                }
+            }
+        }
 
         return false; // replace me
     }
@@ -22,9 +30,15 @@ public class ArrayResizer {
     }
 
     public static int[][] resize(int[][] array2D) {
-        // TODO part b
-
-        return null; // replace me
+        int[][] smaller = ArrayResizer.resize(array2D);
+        for (int r = 0; r <= array2D.length; r++){
+            for (int c = 0; c <= array2D[r].length; c++){
+                if (array2D[r][c] != 0){
+                   
+                }
+            }
+        }
+        return null;
     }
 
     public static void check(boolean test) throws AssertionError {
