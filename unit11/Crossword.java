@@ -61,7 +61,14 @@ public class Crossword {
      * Precondition: r and c are valid indexes in blackSquares.
      */
     private boolean toBeLabeled(int r, int c, boolean[][] blackSquares) {
-        /* to be implemented in part (a) */
+        for (int r = 0; r <= blackSquares.length; r++) {
+            for (int c = 0; c < blackSquares[0].length; c++) {
+                if (isBlack(blackSquares[r - 1][c]) == true) {
+                    return true;
+                } else
+                    return false;
+            }
+        }
 
         return false; // replace me!
     }
