@@ -16,7 +16,13 @@ public class LightBoard {
      * Postcondition: each light has a 40% probability of being set to on.
      */
     public LightBoard(int numRows, int numCols) {
-        /* TODO to be implemented in part (a) */
+        for (int r = 0; r <= lights.length; r++){
+            for (int c = 0; c <= lights[0].length; c++){
+                while(r <= lights.length){
+                    
+                }
+            }
+        }
 
     }
 
