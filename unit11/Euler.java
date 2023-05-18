@@ -142,8 +142,12 @@ public class Euler {
         return n;
         
     }
+
+    public static BigInteger problem13(){
+        return BigInteger;
+    }
     
     public static void main(String[] args) {
-       System.out.println(problem11());
+       System.out.println(problem12());
     }
 }
