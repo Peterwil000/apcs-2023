@@ -3,6 +3,7 @@ import java.math.BigInteger;
 public class Euler {
 
      private static int counters = 0;
+     private static long i = 0;
 
     public static int problem6(){
         int sumOfSquares = 0;
@@ -261,20 +262,57 @@ public class Euler {
             return result;
     }
 
-    public static long problem14(){
-        long largestSeq = 0;
-        long currentLong = 0;
-        
-        for(long i = 0; i < 1000000; i++){
-            if(i % 2 == 0){
-                currentLong = i / 2;
-            }
+    public static long even(long i){
+        if(n % 2 == 0){
+            n / 2;
         }
-        return largestSeq;
     }
+
+    public static long odd(long i){
+        if(n % 2 != 0){
+            (3 * n) + 1;
+        }
+    }
+
+    public static long problem14(){
+
+    int length = 1000000; 
+		int size = 0;
+        max = 1;
+        n = 0;
+
+		for (int i = 2; i < limit; i++) {
+			size = getChainSize(i);
+			if (size > max) {
+				max = size;
+				n = i;
+			}
+		}
+		return n;
+	}
+
+	public static int evenOdd(int n) {
+
+		long num = n;
+		List<Long> sean = new ArrayList<>();
+		int size = 0;
+		while (num != 1) {
+			sean.add(num);
+			
+			if (num % 2 == 0) {
+				num = num / 2;
+			} else {
+				num = 3 * num + 1;
+			}
+		}
+		size = sean.size();
+		return size;
+	}
+
+}
 
     
     public static void main(String[] args) {
-       System.out.println(problem13());
+       System.out.println(problem14());
     }
 }
