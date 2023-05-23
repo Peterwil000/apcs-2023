@@ -262,18 +262,6 @@ public class Euler {
             return result;
     }
 
-    public static long even(long i){
-        if(n % 2 == 0){
-            n / 2;
-        }
-    }
-
-    public static long odd(long i){
-        if(n % 2 != 0){
-            (3 * n) + 1;
-        }
-    }
-
     public static long problem14(){
 
     int length = 1000000; 
@@ -316,3 +304,5 @@ public class Euler {
        System.out.println(problem14());
     }
 }
+
+
