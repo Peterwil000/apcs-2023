@@ -312,18 +312,19 @@ public class Euler {
 
     public static long problem16(){
         long count = 0;
-        long val = (long)Math.pow(2, 1000);
-        long vals = 9223372036854775807l;
+        BigInteger val = new BigInteger("2");
+        BigInteger vals = val.pow(2);
+        //long vals = 9223372036854775807l;
 
         char[] digits = String.valueOf(vals).toCharArray();
 
-        // for(int i = 0; i < digits.length; i++){
-        //     count += digits[i];
-        // }
-
-        for (char c : digits) {
-            count += Integer.parseInt(c + "");
+        for(int i = 0; i < digits.length; i++){
+            count += digits[i];
         }
+
+        //for (char c : digits) {
+        //    count += Integer.parseInt(c + "");
+        //}
         return count;
     }
     public static void main(String[] args) {
