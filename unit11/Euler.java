@@ -1,9 +1,10 @@
 import java.math.BigInteger;
+import java.util.ArrayList;
 
 public class Euler {
 
-     private static int counters = 0;
-     private static long i = 0;
+     //private static int counters = 0;
+     //private static long i = 0;
 
     public static int problem6(){
         int sumOfSquares = 0;
@@ -264,13 +265,13 @@ public class Euler {
 
     public static long problem14(){
 
-    int length = 1000000; 
+        int length = 1000000; 
 		int size = 0;
-        max = 1;
-        n = 0;
+        int max = 1;
+        int n = 0;
 
-		for (int i = 2; i < limit; i++) {
-			size = getChainSize(i);
+		for (int i = 2; i < length; i++) {
+			size = evenOdd(i);
 			if (size > max) {
 				max = size;
 				n = i;
@@ -282,7 +283,7 @@ public class Euler {
 	public static int evenOdd(int n) {
 
 		long num = n;
-		List<Long> sean = new ArrayList<>();
+		ArrayList<Long> sean = new ArrayList<>();
 		int size = 0;
 		while (num != 1) {
 			sean.add(num);
@@ -297,11 +298,36 @@ public class Euler {
 		return size;
 	}
 
-}
+    public static int problem15(){
+        int counter = 0;
+        return counter;
 
-    
+        seany = new int[20][20];
+        for(int i = 0; i <= seany.length; i++){
+            for(int j = 0; j <= seany[0].length; j++){
+
+            }
+        }
+    }
+
+    public static long problem16(){
+        long count = 0;
+        long val = (long)Math.pow(2, 1000);
+        long vals = 9223372036854775807l;
+
+        char[] digits = String.valueOf(vals).toCharArray();
+
+        // for(int i = 0; i < digits.length; i++){
+        //     count += digits[i];
+        // }
+
+        for (char c : digits) {
+            count += Integer.parseInt(c + "");
+        }
+        return count;
+    }
     public static void main(String[] args) {
-       System.out.println(problem14());
+       System.out.println(problem16());
     }
 }
 
