@@ -300,26 +300,26 @@ public class Euler {
 
     public static int problem15(){
         int counter = 0;
-        return counter;
-
         seany = new int[20][20];
+        
         for(int i = 0; i <= seany.length; i++){
             for(int j = 0; j <= seany[0].length; j++){
 
             }
         }
+        return counter;
     }
 
     public static long problem16(){
         long count = 0;
         BigInteger val = new BigInteger("2");
-        BigInteger vals = val.pow(2);
+        BigInteger vals = val.pow(1000);
         //long vals = 9223372036854775807l;
 
         char[] digits = String.valueOf(vals).toCharArray();
 
         for(int i = 0; i < digits.length; i++){
-            count += digits[i];
+            count += Integer.parseInt(digits[i]+"");
         }
 
         //for (char c : digits) {
