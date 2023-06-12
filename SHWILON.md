@@ -15,4 +15,4 @@ What did you build?
 ↪I coded the simple method that allows the user to choose the scene when first booting up into the game
 
 How can we try it?
-↪ You will be able to play test the game - the game will most likely moved to itch.io
+↪ You will be able to play test the game - you will be able to download the game file and play the game
